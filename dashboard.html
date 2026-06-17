@@ -4,7 +4,114 @@
 <head>
 <meta charset="UTF-8">
 <title>Dashboard - Senior Comex</title>
+
 <link rel="stylesheet" href="assets/css/style.css">
+
+<style>
+:root{
+    --senior:#0B5A6A;
+}
+
+/* layout geral */
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#f5f7fa;
+    display:flex;
+}
+
+/* SIDEBAR */
+.sidebar{
+    width:250px;
+    height:100vh;
+    background:#fff;
+    border-right:1px solid #e5e7eb;
+    padding:20px;
+}
+
+.logo-area h2{
+    margin:0;
+    color:#111827;
+}
+
+.logo-area span{
+    color:var(--senior);
+}
+
+.menu a{
+    display:block;
+    padding:10px;
+    color:#374151;
+    text-decoration:none;
+    border-radius:8px;
+    margin-top:5px;
+}
+
+.menu a:hover,
+.menu a.active{
+    background:var(--senior);
+    color:#fff;
+}
+
+/* MAIN */
+.main{
+    flex:1;
+    padding:30px;
+}
+
+/* CARDS */
+.cards{
+    display:flex;
+    gap:15px;
+}
+
+.card{
+    background:#fff;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+/* TAB */
+.tab-content{
+    display:none;
+}
+
+/* TABLE */
+.table-wrapper{
+    overflow-x:auto;
+    margin-top:20px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    min-width:2200px;
+    background:#fff;
+}
+
+th{
+    background:var(--senior);
+    color:#fff;
+    padding:10px;
+    text-align:left;
+    white-space:nowrap;
+    position:sticky;
+    top:0;
+}
+
+td{
+    padding:8px;
+    border-bottom:1px solid #eee;
+    white-space:nowrap;
+    outline:none;
+}
+
+td:focus{
+    background:#e6f2f5;
+}
+</style>
+
 </head>
 
 <body>
@@ -18,109 +125,88 @@
     </div>
 
     <nav class="menu">
-
         <a href="#" class="active" onclick="openTab('dashboard')">Dashboard</a>
-        <a href="#">Clientes</a>
         <a href="#" onclick="openTab('followup')">Follow-up</a>
+        <a href="#">Clientes</a>
         <a href="#">Configurações</a>
-
     </nav>
 
 </aside>
 
-<!-- CONTEÚDO -->
+<!-- MAIN -->
 <main class="main">
 
-    <!-- DASHBOARD -->
-    <div id="dashboard" class="tab-content" style="display:block;">
+<!-- DASHBOARD -->
+<div id="dashboard" class="tab-content" style="display:block;">
 
-        <h1>Bem-vinda à Senior Comex</h1>
+    <h1>Bem-vinda à Senior Comex</h1>
 
-        <div class="cards">
+    <div class="cards">
+        <div class="card">📦 Importações</div>
+        <div class="card">👥 Clientes</div>
+        <div class="card">📄 Follow-up</div>
+    </div>
 
-            <div class="card">📦 Importações</div>
-            <div class="card">👥 Clientes</div>
-            <div class="card">📄 Follow-up</div>
+</div>
 
-        </div>
+<!-- FOLLOW UP -->
+<div id="followup" class="tab-content">
+
+    <h2>FOLLOW UP OPERAÇÕES</h2>
+
+    <div class="table-wrapper">
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>ANALISTA</th>
+                    <th>PO CLIENTE</th>
+                    <th>DATA</th>
+                    <th>PRODUTO</th>
+                    <th>RESERVA</th>
+                    <th>AGÊNCIA</th>
+                    <th>NAVIO</th>
+                    <th>ORIGEM</th>
+                    <th>DESTINO</th>
+                    <th>CONTAINERS</th>
+                    <th>DRAFT</th>
+                    <th>VGM</th>
+                    <th>CARGA</th>
+                    <th>REMARK</th>
+                    <th>STATUS</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td contenteditable="true">MONICA</td>
+                    <td contenteditable="true">3841</td>
+                    <td contenteditable="true">05/05/2026</td>
+                    <td contenteditable="true">SESAME SEEDS</td>
+                    <td contenteditable="true">EBKG16785387</td>
+                    <td contenteditable="true">DC LOGISTICS</td>
+                    <td contenteditable="true">VALOR MM622R</td>
+                    <td contenteditable="true">PARANAGUA</td>
+                    <td contenteditable="true">DAMIETTA</td>
+                    <td contenteditable="true">15X40</td>
+                    <td contenteditable="true">OK</td>
+                    <td contenteditable="true">OK</td>
+                    <td contenteditable="true">OK</td>
+                    <td contenteditable="true">EMBARCADO</td>
+                    <td contenteditable="true">FINALIZADO</td>
+                </tr>
+
+            </tbody>
+
+        </table>
 
     </div>
 
-    <!-- FOLLOW UP -->
-    <div id="followup" class="tab-content">
-
-        <div class="card">
-
-            <h2>FOLLOW UP OPERAÇÕES</h2>
-
-            <div class="table-wrapper">
-
-                <!-- 🔥 COLE SUA TABELA COMPLETA AQUI DENTRO -->
-
-                <table>
-                    <thead>
-                        <tr>
-                            <th>ANALISTA</th>
-                            <th>PO CLIENTE</th>
-                            <th>DATA NOMEAÇÃO</th>
-                            <th>PRODUTO</th>
-                            <th>RESERVA</th>
-                            <th>AGÊNCIA</th>
-                            <th>NAVIO</th>
-                            <th>ORIGEM</th>
-                            <th>DESTINO</th>
-                            <th>CONTAINERS</th>
-                            <th>DRAFT</th>
-                            <th>VGM</th>
-                            <th>CARGA</th>
-                            <th>REMARK</th>
-                            <th>STATUS</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                        <tr>
-                            <td>MONICA</td>
-                            <td>3841</td>
-                            <td>05/05/2026</td>
-                            <td>SESAME SEEDS</td>
-                            <td>EBKG16785387</td>
-                            <td>DC LOGISTICS</td>
-                            <td>VALOR MM622R</td>
-                            <td>PARANAGUA</td>
-                            <td>DAMIETTA</td>
-                            <td>15X40</td>
-                            <td>OK</td>
-                            <td>OK</td>
-                            <td>OK</td>
-                            <td>EMBARCADO</td>
-                            <td>FINALIZADO</td>
-                        </tr>
-                    </tbody>
-
-                </table>
-
-            </div>
-
-        </div>
-
-    </div>
+</div>
 
 </main>
 
-<!-- JS DAS ABAS -->
 <script>
 function openTab(tab){
-
-    let tabs = document.querySelectorAll(".tab-content");
-
-    tabs.forEach(t => {
-        t.style.display = "none";
-    });
-
-    document.getElementById(tab).style.display = "block";
-}
-</script>
-
-</body>
-</html>
