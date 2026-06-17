@@ -5,58 +5,67 @@ body{
     background:#f5f7fa;
 }
 
-/* Login */
-.login-body{
-    margin:0;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
-    overflow:hidden;
-}
-
-.login-box{
-    background:#fff;
-    padding:40px;
-    border-radius:20px;
-    width:350px;
-    text-align:center;
-    box-shadow:0 10px 30px rgba(0,0,0,0.15);
-}
-
-.login-box input{
-    width:100%;
-    padding:12px;
-    margin:10px 0;
-    border:1px solid #ddd;
-    border-radius:10px;
-    box-sizing:border-box;
-}
-
-.login-box button{
-    width:100%;
-    padding:12px;
-    background:#0B5A6A;
-    color:#fff;
-    border:none;
-    border-radius:10px;
-    cursor:pointer;
-    font-weight:bold;
-}
-
-.login-box button:hover{
-    background:#33C0C0;
-}
-
-/* Menu */
+/* SIDEBAR TECNOLÓGICA */
 .sidebar{
-    width:250px;
+    width:260px;
     height:100vh;
-    background:linear-gradient(180deg,#0B5A6A,#33C0C0);
-    color:#fff;
-    position:fixed;
+    background:#0b1220;
     padding:25px;
-    box-sizing:border-box;
+    position:fixed;
+    box-shadow:2px 0 20px rgba(0,0,0,0.4);
+}
+
+/* LOGO */
+.logo-area h2{
+    color:#38bdf8;
+    margin:0;
+    font-size:20px;
+    letter-spacing:1px;
+}
+
+.logo-area span{
+    color:#ffffff;
+}
+
+.sub{
+    color:#64748b;
+    font-size:12px;
+    margin-top:5px;
+}
+
+/* MENU */
+.menu{
+    display:flex;
+    flex-direction:column;
+    margin-top:30px;
+    gap:10px;
+}
+
+/* LINKS */
+.menu a{
+    text-decoration:none;
+    color:#cbd5e1;
+    padding:12px 14px;
+    border-radius:12px;
+    transition:0.3s;
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+/* HOVER ANIMADO */
+.menu a:hover{
+    background:#1e293b;
+    transform:translateX(6px);
+    color:#fff;
+}
+
+/* ATIVO */
+.menu a.active{
+    background:linear-gradient(90deg,#38bdf8,#6366f1);
+    color:white;
+    font-weight:bold;
+    box-shadow:0 0 15px rgba(56,189,248,0.3);
 }
 
 .sidebar a{
