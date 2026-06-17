@@ -66,18 +66,6 @@ body{
     box-shadow:0 4px 12px rgba(11,90,106,0.2);
 }
 
-.sidebar a{
-    display:block;
-    color:#fff;
-    text-decoration:none;
-    padding:12px;
-    margin:8px 0;
-    border-radius:10px;
-}
-
-.sidebar a:hover{
-    background:rgba(255,255,255,0.2);
-}
 
 /* Conteúdo */
 .main{
@@ -163,20 +151,3 @@ td{
     z-index:1;
 }
 
-/* Caixa de login */
-.login-box{
-    position:relative;
-    z-index:2;
-    width:420px;
-    background:rgba(255,255,255,0.95);
-    padding:50px;
-    border-radius:25px;
-    text-align:center;
-    box-shadow:0 20px 50px rgba(0,0,0,0.35);
-}
-
-/* Logo */
-.logo{
-    width:240px;
-    margin-bottom:25px;
-}
