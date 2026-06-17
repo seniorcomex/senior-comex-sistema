@@ -1,76 +1,84 @@
-
 body{
     margin:0;
     font-family:Arial, sans-serif;
     background:#f5f7fa;
-
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
 }
 
-/* SIDEBAR BRANCA MODERNA */
+/* SIDEBAR TECNOLÓGICA */
 .sidebar{
-    width:250px;
+    width:260px;
     height:100vh;
-    background:#ffffff;
-    border-right:1px solid #e5e7eb;
+    background:#0b1220;
+    padding:25px;
     position:fixed;
-    padding:22px;
-    box-shadow:2px 0 12px rgba(0,0,0,0.05);
+    box-shadow:2px 0 20px rgba(0,0,0,0.4);
 }
 
 /* LOGO */
 .logo-area h2{
+    color:#38bdf8;
     margin:0;
-    font-size:18px;
-    color:#111827;
+    font-size:20px;
+    letter-spacing:1px;
 }
 
 .logo-area span{
-    color:#0B5A6A;
+    color:#ffffff;
 }
 
-.logo-area p{
+.sub{
+    color:#64748b;
     font-size:12px;
-    color:#6b7280;
-    margin-top:4px;
+    margin-top:5px;
 }
 
 /* MENU */
 .menu{
     display:flex;
     flex-direction:column;
-    gap:6px;
-    margin-top:28px;
+    margin-top:30px;
+    gap:10px;
 }
 
 /* LINKS */
 .menu a{
     text-decoration:none;
-    color:#374151;
-    padding:10px 12px;
-    border-radius:8px;
-    font-size:14px;
-    transition:0.2s;
+    color:#cbd5e1;
+    padding:12px 14px;
+    border-radius:12px;
+    transition:0.3s;
+    display:flex;
+    align-items:center;
+    gap:10px;
 }
 
-/* HOVER LIMPO */
+/* HOVER ANIMADO */
 .menu a:hover{
-    background:#f3f4f6;
-    padding-left:16px;
-    color:#0B5A6A;
+    background:#1e293b;
+    transform:translateX(6px);
+    color:#fff;
 }
 
-/* ITEM ATIVO */
+/* ATIVO */
 .menu a.active{
-    background:#0B5A6A;
+    background:linear-gradient(90deg,#38bdf8,#6366f1);
     color:white;
-    font-weight:600;
-    box-shadow:0 4px 12px rgba(11,90,106,0.2);
+    font-weight:bold;
+    box-shadow:0 0 15px rgba(56,189,248,0.3);
 }
 
+.sidebar a{
+    display:block;
+    color:#fff;
+    text-decoration:none;
+    padding:12px;
+    margin:8px 0;
+    border-radius:10px;
+}
+
+.sidebar a:hover{
+    background:rgba(255,255,255,0.2);
+}
 
 /* Conteúdo */
 .main{
@@ -156,3 +164,20 @@ td{
     z-index:1;
 }
 
+/* Caixa de login */
+.login-box{
+    position:relative;
+    z-index:2;
+    width:420px;
+    background:rgba(255,255,255,0.95);
+    padding:50px;
+    border-radius:25px;
+    text-align:center;
+    box-shadow:0 20px 50px rgba(0,0,0,0.35);
+}
+
+/* Logo */
+.logo{
+    width:240px;
+    margin-bottom:25px;
+}
