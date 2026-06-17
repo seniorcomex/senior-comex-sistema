@@ -1,46 +1,126 @@
 <!DOCTYPE html>
-<html lang='pt-br'>
+<html lang="pt-br">
+
 <head>
-<meta charset='UTF-8'>
+<meta charset="UTF-8">
 <title>Dashboard - Senior Comex</title>
-<link rel='stylesheet' href='assets/css/style.css'>
+<link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
 
-  <!-- SIDEBAR -->
-  <aside class="sidebar">
+<!-- SIDEBAR -->
+<aside class="sidebar">
 
-  <div class="logo-area">
-    <h2>Senior <span>Comex</span></h2>
-    <p>Sistema Interno</p>
-  </div>
+    <div class="logo-area">
+        <h2>Senior <span>Comex</span></h2>
+        <p>Sistema Interno</p>
+    </div>
 
-  <nav class="menu">
+    <nav class="menu">
 
-    <a href="#" class="active">Dashboard</a>
-    <a href="#">Clientes</a>
-    <a href="#">Follow-up</a>
-    <a href="#">Configurações</a>
+        <a href="#" class="active" onclick="openTab('dashboard')">Dashboard</a>
+        <a href="#">Clientes</a>
+        <a href="#" onclick="openTab('followup')">Follow-up</a>
+        <a href="#">Configurações</a>
 
-  </nav>
+    </nav>
 
 </aside>
 
-  <!-- CONTEÚDO -->
-  <main class="main">
+<!-- CONTEÚDO -->
+<main class="main">
 
-    <h1>Bem-vinda à Senior Comex</h1>
-    <p>Sistema interno pronto para utilização.</p>
+    <!-- DASHBOARD -->
+    <div id="dashboard" class="tab-content" style="display:block;">
 
-    <div class="cards">
+        <h1>Bem-vinda à Senior Comex</h1>
 
-      <div class="card">📦 Importações</div>
-      <div class="card">👥 Clientes</div>
-      <div class="card">📄 Follow-up</div>
+        <div class="cards">
+
+            <div class="card">📦 Importações</div>
+            <div class="card">👥 Clientes</div>
+            <div class="card">📄 Follow-up</div>
+
+        </div>
 
     </div>
 
-  </main>
+    <!-- FOLLOW UP -->
+    <div id="followup" class="tab-content">
+
+        <div class="card">
+
+            <h2>FOLLOW UP OPERAÇÕES</h2>
+
+            <div class="table-wrapper">
+
+                <!-- 🔥 COLE SUA TABELA COMPLETA AQUI DENTRO -->
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ANALISTA</th>
+                            <th>PO CLIENTE</th>
+                            <th>DATA NOMEAÇÃO</th>
+                            <th>PRODUTO</th>
+                            <th>RESERVA</th>
+                            <th>AGÊNCIA</th>
+                            <th>NAVIO</th>
+                            <th>ORIGEM</th>
+                            <th>DESTINO</th>
+                            <th>CONTAINERS</th>
+                            <th>DRAFT</th>
+                            <th>VGM</th>
+                            <th>CARGA</th>
+                            <th>REMARK</th>
+                            <th>STATUS</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>MONICA</td>
+                            <td>3841</td>
+                            <td>05/05/2026</td>
+                            <td>SESAME SEEDS</td>
+                            <td>EBKG16785387</td>
+                            <td>DC LOGISTICS</td>
+                            <td>VALOR MM622R</td>
+                            <td>PARANAGUA</td>
+                            <td>DAMIETTA</td>
+                            <td>15X40</td>
+                            <td>OK</td>
+                            <td>OK</td>
+                            <td>OK</td>
+                            <td>EMBARCADO</td>
+                            <td>FINALIZADO</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</main>
+
+<!-- JS DAS ABAS -->
+<script>
+function openTab(tab){
+
+    let tabs = document.querySelectorAll(".tab-content");
+
+    tabs.forEach(t => {
+        t.style.display = "none";
+    });
+
+    document.getElementById(tab).style.display = "block";
+}
+</script>
 
 </body>
 </html>
