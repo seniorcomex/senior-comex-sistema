@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang='pt-br'>
+<head>
+<meta charset='UTF-8'>
+<title>Follow-up</title>
+<link rel='stylesheet' href='assets/css/style.css'>
+</head>
+<body>
+<div class='sidebar'>
+<h3>SENIOR COMEX</h3>
+<a href='dashboard.html'>Dashboard</a>
+<a href='followup.html'>Follow-up</a>
+<a href='clientes.html'>Clientes</a>
+<a href='funcionarios.html'>Funcionários</a>
+<a href='configuracoes.html'>Configurações</a>
+</div>
+
+<div class='main'>
+<h1>Follow-up</h1>
+
+<div class='top-bar'>
+<input id='cliente' placeholder='Cliente'>
+<input id='responsavel' placeholder='Responsável'>
+<input id='obs' placeholder='Obs'>
+<select id='status'>
+<option>Pendente</option>
+<option>Em andamento</option>
+<option>Finalizado</option>
+</select>
+<button onclick='addTask()'>Adicionar</button>
+<select id='filter' onchange='renderTable()'>
+<option value='todos'>Todos</option>
+<option value='Pendente'>Pendente</option>
+<option value='Em andamento'>Em andamento</option>
+<option value='Finalizado'>Finalizado</option>
+</select>
+</div>
+
+<table>
+<thead>
+<tr>
+<th>Cliente</th><th>Responsável</th><th>Obs</th><th>Status</th><th>Ações</th>
+</tr>
+</thead>
+<tbody id='tableBody'></tbody>
+</table>
+
+</div>
+<script src='assets/js/followup.js'></script>
+</body>
+</html>
