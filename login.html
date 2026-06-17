@@ -1,32 +1,67 @@
 <!DOCTYPE html>
-<html lang='pt-br'>
+<html lang="pt-br">
 <head>
-<meta charset='UTF-8'>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Login - Senior Comex</title>
-<link rel='stylesheet' href='assets/css/style.css'>
+<link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body class='login-body'>
-h2>Área do Cliente</h2>
-    <p>Acesso ao sistema</p>
 
-    <input id="user" placeholder="Usuário">
-    <input id="pass" type="password" placeholder="Senha">
+<body class="login-body">
 
-    <button onclick="login()">Entrar</button>
+<div class="slider">
 
-    <p id="msg"></p>
+    <img src="assets/img/banner1.jpg.jpeg" class="slide active">
+    <img src="assets/img/banner2.jpg.jpeg" class="slide">
+    <img src="assets/img/banner3.jpg.jpeg" class="slide">
+    <img src="assets/img/banner4.jpg.jpeg" class="slide">
+    <img src="assets/img/banner5.jpg.jpeg" class="slide">
+
 </div>
 
+<div class="overlay"></div>
+
+<div class="login-box">
+
+    <img src="assets/img/nova logo.png" class="logo">
+
+    <h2>Bem-vindo</h2>
+    <p>Acesse o sistema Senior Comex</p>
+
+    <input id="user" type="text" placeholder="Usuário">
+
+    <input id="pass" type="password" placeholder="Senha">
+
+    <button onclick="login()">
+        Entrar
+    </button>
+
+    <p id="msg"></p>
+
+</div>
+
+<script src="assets/js/app.js"></script>
+
 <script>
-let slides = document.querySelectorAll('.slide');
+
+let slides = document.querySelectorAll(".slide");
 let atual = 0;
 
 setInterval(() => {
-    slides[atual].classList.remove('active');
-    atual = (atual + 1) % slides.length;
-    slides[atual].classList.add('active');
+
+    slides[atual].classList.remove("active");
+
+    atual++;
+
+    if (atual >= slides.length) {
+        atual = 0;
+    }
+
+    slides[atual].classList.add("active");
+
 }, 4000);
+
 </script>
-<script src='assets/js/app.js'></script>
+
 </body>
 </html>
