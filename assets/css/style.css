@@ -172,3 +172,6 @@ td{
     width:240px;
     margin-bottom:25px;
 }
+.tab-content{
+    display:none;
+}
