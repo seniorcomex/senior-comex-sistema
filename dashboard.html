@@ -210,3 +210,15 @@ td:focus{
 
 <script>
 function openTab(tab){
+
+    document.querySelectorAll('.tab-content').forEach(el=>{
+        el.style.display='none';
+    });
+
+    document.getElementById(tab).style.display='block';
+}
+</script>
+
+</body>
+</html>
+
