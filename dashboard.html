@@ -146,6 +146,16 @@ td:focus{
         <div class="card">👥 Clientes</div>
         <div class="card">📄 Follow-up</div>
     </div>
+    <div id="followup" class="tab-content">
+
+    <h2>FOLLOW UP OPERAÇÕES</h2>
+
+    <div class="table-wrapper">
+
+        <!-- SUA TABELA VAI AQUI DENTRO -->
+
+   
+</div>
 
 </div>
 
@@ -218,7 +228,16 @@ function openTab(tab){
     document.getElementById(tab).style.display='block';
 }
 </script>
+<script>
+function openTab(tab){
 
+    document.querySelectorAll('.tab-content').forEach(el=>{
+        el.style.display='none';
+    });
+
+    document.getElementById(tab).style.display='block';
+}
+</script>
 </body>
 </html>
 
